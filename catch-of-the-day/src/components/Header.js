@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Header = ({ tagline }) => (
   <header className="top">
@@ -15,6 +16,10 @@ const Header = ({ tagline }) => (
     </h3>
   </header>
 );
+
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired,
+};
 
 // ^^ Since the component is just being passed in data via the props, we can turn it into a stateless functional component
 // class Header extends React.Component {
